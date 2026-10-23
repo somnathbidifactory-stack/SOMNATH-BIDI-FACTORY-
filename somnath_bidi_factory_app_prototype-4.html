@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#a77b18">
+<title>Somnath Bidi Factory — App Prototype</title>
+<style>
+:root{--gold:#a77b18;--gold2:#d8b45b;--ink:#252525;--muted:#6b7280;--cream:#fffdf7;--line:#eadfbe}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f7f5ef;color:var(--ink)}
+header{background:linear-gradient(135deg,#fff,#fbf3d9);border-bottom:1px solid var(--line);padding:18px 16px}
+.wrap{max-width:980px;margin:auto}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#8e6810,#e2c16b);display:grid;place-items:center;color:#fff;font-weight:800;font-size:19px;box-shadow:0 4px 14px #a77b1826}
+h1{font-size:18px;margin:0;letter-spacing:.5px}
+.tag{font-size:11px;color:#7b651f;margin-top:5px;letter-spacing:.8px}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+button,.btn{border:0;border-radius:10px;padding:11px 14px;font-weight:700;cursor:pointer;font-size:13px}
+nav button{background:#fff;border:1px solid var(--line);color:#6d5311}
+nav button.active,.primary{background:var(--gold);color:#fff}
+main{padding:22px 16px 36px}
+.hero{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 8px 25px #5b47110b}
+.eyebrow{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+h2{font-size:26px;line-height:1.15;margin:10px 0}
+p{line-height:1.6;color:#565656;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
+.card strong{display:block;margin-bottom:7px}
+.card p{margin:0;font-size:13px}
+.panel{display:none;margin-top:14px}
+.panel.show{display:block}
+label{display:block;font-size:13px;font-weight:700;margin:12px 0 6px}
+input,textarea{width:100%;padding:12px;border:1px solid #d8d2c2;border-radius:10px;font:inherit;background:#fff}
+textarea{min-height:90px;resize:vertical}
+.notice{background:#fff8df;border:1px solid #ead28c;border-radius:12px;padding:12px;font-size:12px;line-height:1.5;color:#6a5314;margin-top:14px}
+footer{text-align:center;padding:20px 16px;color:#777;font-size:12px}
+.small{font-size:12px;color:var(--muted)}
+.stat{font-size:25px;color:var(--gold);font-weight:800}
+@media(max-width:650px){.grid{grid-template-columns:1fr}.hero{padding:19px}h2{font-size:23px}.card{padding:14px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <div class="logo">SF</div>
+      <div>
+        <h1>SOMNATH BIDI FACTORY</h1>
+        <div class="tag">BUSINESS INFORMATION & MANAGEMENT</div>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <button class="active" onclick="showPanel('home',this)">Home</button>
+      <button onclick="showPanel('about',this)">About Us</button>
+      <button onclick="showPanel('contact',this)">Contact</button>
+      <button onclick="showPanel('admin',this)">Admin Demo</button>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <section id="home" class="panel show">
+    <div class="hero">
+      <div class="eyebrow">Company Profile</div>
+      <h2>Welcome to<br>Somnath Bidi Factory</h2>
+      <p>This is an early mobile-friendly prototype for the company's business information and internal management. It is designed to work in a phone or computer browser.</p>
+      <p><strong>Founder &amp; Owner:</strong> Suresh Chandra Das</p>
+      <a class="btn primary" style="display:inline-block;text-decoration:none" href="https://somnathbidifactory.com" target="_blank" rel="noopener">Visit Website</a>
+    </div>
+    <div class="grid">
+      <div class="card"><strong>Company Information</strong><p>Keep approved company details in one place.</p></div>
+      <div class="card"><strong>Business Enquiries</strong><p>Plan a simple way to review incoming business enquiries.</p></div>
+      <div class="card"><strong>Admin Area</strong><p>A future private dashboard can be connected to a secure data store.</p></div>
+    </div>
+    <div class="notice"><strong>Prototype notice:</strong> This file is a visual starter only. It does not have secure accounts, cloud storage, or a live database. Do not enter real customer or payment information here.</div>
+  </section>
+
+  <section id="about" class="panel">
+    <div class="hero">
+      <div class="eyebrow">About Us</div>
+      <h2>Somnath Bidi Factory</h2>
+      <p><strong>Business:</strong> Manufacturer and wholesale supplier.</p>
+      <p><strong>Address:</strong> Promod Pally, Habibpur, Nadia, West Bengal – 741402, India.</p>
+      <p><strong>Website:</strong> somnathbidifactory.com</p>
+      <p class="small">Please review and confirm all company information before publishing this prototype.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="panel">
+    <div class="hero">
+      <div class="eyebrow">Contact Details</div>
+      <h2>Business Contact</h2>
+      <p><strong>Email:</strong> somnathbidifactory@gmail.com</p>
+      <p><strong>Website:</strong> <a href="https://somnathbidifactory.com" target="_blank" rel="noopener">somnathbidifactory.com</a></p>
+      <p class="small">This prototype intentionally does not collect or send customer data. A secure contact workflow can be planned after checking the applicable legal and platform requirements.</p>
+    </div>
+  </section>
+
+  <section id="admin" class="panel">
+    <div class="hero">
+      <div class="eyebrow">Admin Demo</div>
+      <h2>Management Dashboard Preview</h2>
+      <p>This is a sample screen to show the future layout. The numbers below are examples, not live business data.</p>
+      <div class="grid">
+        <div class="card"><span class="small">Open enquiries</span><div class="stat">—</div></div>
+        <div class="card"><span class="small">Orders to review</span><div class="stat">—</div></div>
+        <div class="card"><span class="small">Payment records</span><div class="stat">—</div></div>
+      </div>
+      <div class="notice"><strong>Security:</strong> This is not a real login and does not protect private information. A production admin area needs proper authentication, permissions, secure hosting, and a database.</div>
+    </div>
+  </section>
+</main>
+<footer>© Somnath Bidi Factory · Prototype for planning purposes</footer>
+<script>
+function showPanel(id,btn){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('show'));
+  document.getElementById(id).classList.add('show');
+  document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
